@@ -26,6 +26,13 @@ const allDivisions = [
   { name: "Mymensingh", lat: 24.7471, lng: 90.4203 },
 ];
 
+const customIcon = new L.Icon({
+  iconUrl: "/location-pin.png",
+  iconSize: [32, 32], // adjust as needed
+  iconAnchor: [16, 32], // point of the icon which will correspond to marker's location
+  popupAnchor: [0, -32], // point from which the popup should open relative to the iconAnchor
+});
+
 export default function GeoMap() {
   const [locations, setLocations] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -93,15 +100,15 @@ export default function GeoMap() {
           attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        {mergedData.map((loc, idx) => (
-          <Marker key={idx} position={[loc.lat, loc.lng]}>
-            <Popup>
-              <strong>{loc.name}</strong>
-              <br />
-              {loc.count} posts
-            </Popup>
-          </Marker>
-        ))}
+      {mergedData.map((loc, idx) => (
+        <Marker key={idx} position={[loc.lat, loc.lng]} icon={customIcon}>
+          <Popup>
+            <strong>{loc.name}</strong>
+            <br />
+            {loc.count} posts
+          </Popup>
+        </Marker>
+      ))}
       </MapContainer>
     );
   }
