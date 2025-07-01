@@ -88,7 +88,7 @@ const EmotionDonutChart = () => {
     };
   };
 
-  const totalPosts = categoryAnalysis.total_number_of_posts;
+  const totalPosts = 80;
 
   let content = null;
 
@@ -133,7 +133,7 @@ const EmotionDonutChart = () => {
                 cy="50%"
                 innerRadius={50}
                 outerRadius={100}
-                label={renderCustomizedLabel}
+              label={renderCustomizedLabel}
               >
                 {chartData.map((entry, index) => (
                   <Cell key={`cell-${index}`} fill={COLORS[entry.name]} />
