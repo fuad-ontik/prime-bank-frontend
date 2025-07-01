@@ -71,7 +71,7 @@ const EmotionDonutChart = () => {
       prev.includes(key) ? prev.filter((k) => k !== key) : [...prev, key]
     );
   };
-
+  const renderCustomizedLabel = ({ percent }) => `${Math.round(percent * 100)}%`;
   const getButtonStyle = (key) => {
     const name = key.charAt(0).toUpperCase() + key.slice(1);
     const isHidden = hidden.includes(key);
@@ -133,7 +133,7 @@ const EmotionDonutChart = () => {
                 cy="50%"
                 innerRadius={50}
                 outerRadius={100}
-                label
+                label={renderCustomizedLabel}
               >
                 {chartData.map((entry, index) => (
                   <Cell key={`cell-${index}`} fill={COLORS[entry.name]} />
