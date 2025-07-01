@@ -7,11 +7,11 @@ const Header = () => {
   return (
     <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
       <div className="flex items-center space-x-3 sm:space-x-4">
-        <div className="w-25 h-25 sm:w-25 sm:h-25 rounded-xl flex items-center justify-center">
+        <div className="w-32 h-32 sm:w-36 sm:h-36 rounded-xl flex items-center justify-center">
           <img
             src="/Customer_Connect_Logo.png"
             alt="Logo"
-            className="w-22 h-22 sm:w-22 sm:h-22 object-contain"
+            className="w-28 h-28 sm:w-32 sm:h-32 object-contain"
           />
         </div>
         <div>
