@@ -10,7 +10,7 @@ import {
 import { Progress } from "@/components/ui/progress";
 import { Skeleton } from "@/components/ui/skeleton";
 import { getTopPosts } from "@/services/sentiment.service";
-import { Heart, MessageCircle, TrendingUp } from "lucide-react";
+import { Heart, MessageCircle, TrendingUp, ExternalLink } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const TopVirtualPosts = () => {
@@ -107,6 +107,18 @@ const TopVirtualPosts = () => {
               <MessageCircle className="w-3 h-3 sm:w-4 sm:h-4" />
               <span>Comments: {post.comments_count}</span>
             </div>
+            {post.post_url && (
+              <a
+                href={post.post_url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ml-2 inline-flex items-center gap-1 px-2 py-1 rounded-md bg-blue-600 hover:bg-blue-700 text-white font-medium shadow transition-all duration-200 text-xs sm:text-sm"
+                style={{ minWidth: 90 }}
+              >
+                <ExternalLink className="w-4 h-4" />
+                Source Link
+              </a>
+            )}
           </div>
           <Progress
             value={post.reaction_count}
