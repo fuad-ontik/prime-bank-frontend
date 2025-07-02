@@ -24,9 +24,21 @@ const Header = () => {
         </div>
       </div>
       <div className="flex items-center space-x-2 sm:space-x-3 w-full sm:w-auto">
-        {/* <div className="flex items-center space-x-3">
-          <Reanalyze />
-        </div> */}
+        {/* Dummy Login and Sign Up buttons */}
+        <Button
+          variant="outline"
+          size="sm"
+          className="bg-gradient-to-r from-blue-500 to-blue-700 text-white border-0 shadow hover:from-blue-600 hover:to-blue-800 transition-all"
+        >
+          Login
+        </Button>
+        <Button
+          variant="outline"
+          size="sm"
+          className="bg-gradient-to-r from-green-400 to-green-600 text-white border-0 shadow hover:from-green-500 hover:to-green-700 transition-all"
+        >
+          Sign Up
+        </Button>
         <Button
           variant="outline"
           size="sm"
