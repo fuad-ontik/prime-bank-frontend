@@ -10,8 +10,7 @@ import {
 import { Progress } from "@/components/ui/progress";
 import { Skeleton } from "@/components/ui/skeleton";
 import { getTopPosts } from "@/services/sentiment.service";
-import { Heart, MessageCircle, TrendingUp, ExternalLink } from "lucide-react";
-import { FaFacebook } from "react-icons/fa"; 
+import { Heart, MessageCircle, TrendingUp, ExternalLink, Facebook } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const TopVirtualPosts = () => {
@@ -117,7 +116,7 @@ const TopVirtualPosts = () => {
                 style={{ minWidth: 40, justifyContent: "center" }}
                 title="View on Facebook"
               >
-                <FaFacebook className="w-4 h-4" />
+                <Facebook className="w-4 h-4" />
               </a>
             )}
           </div>
